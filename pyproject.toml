@@ -5,7 +5,6 @@ version = "0.1.0"
 dependencies = [
     "dagster==1.13.14",
     "faker==40.31.0",
-    "faker-ecommerce-provider==1.2.0",
     "duckdb",
     "numpy==2.2.6",
     "pandas==2.2.3",
