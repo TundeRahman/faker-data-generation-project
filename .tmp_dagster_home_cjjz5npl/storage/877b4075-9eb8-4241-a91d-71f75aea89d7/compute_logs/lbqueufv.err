@@ -1,0 +1,20 @@
+[32m2026-07-19 08:38:07 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 877b4075-9eb8-4241-a91d-71f75aea89d7 - 47325 - LOGS_CAPTURED - Capturing logs for process (pid: 47325).
+[32m2026-07-19 08:38:07 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 877b4075-9eb8-4241-a91d-71f75aea89d7 - 47325 - generate_personnel_data - STEP_START - Started execution of step "generate_personnel_data".
+[32m2026-07-19 08:38:07 -0600[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 877b4075-9eb8-4241-a91d-71f75aea89d7 - 47325 - generate_personnel_data - STEP_FAILURE - Execution of step "generate_personnel_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "generate_personnel_data"::
+
+AttributeError: 'NoneType' object has no attribute 'content'
+
+Stack Trace:
+  File "/Users/babatunderahman/Documents/Data Analytics/Data Engineering/Dagster/Faker Project/faker-data-generation-project/.venv/lib/python3.10/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/Users/babatunderahman/Documents/Data Analytics/Data Engineering/Dagster/Faker Project/faker-data-generation-project/.venv/lib/python3.10/site-packages/dagster/_utils/__init__.py", line 394, in iterate_with_context
+    next_output = next(iterator)
+  File "/Users/babatunderahman/Documents/Data Analytics/Data Engineering/Dagster/Faker Project/faker-data-generation-project/.venv/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 136, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/Users/babatunderahman/Documents/Data Analytics/Data Engineering/Dagster/Faker Project/faker-data-generation-project/.venv/lib/python3.10/site-packages/dagster/_core/execution/plan/compute_generator.py", line 116, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/Users/babatunderahman/Documents/Data Analytics/Data Engineering/Dagster/Faker Project/faker-data-generation-project/src/faker_data_generation_project/defs/assets/data_extraction.py", line 27, in generate_personnel_data
+    f.write(extracted_data.content)
+[0m
