@@ -1,5 +1,0 @@
-[32m2026-07-19 13:33:08 -0600[0m - dagster - [34mDEBUG[0m - extracted_data_job - 34651193-8038-4207-9d7f-72651e17852a - 81850 - LOGS_CAPTURED - Capturing logs for process (pid: 81850).
-[32m2026-07-19 13:33:08 -0600[0m - dagster - [34mDEBUG[0m - extracted_data_job - 34651193-8038-4207-9d7f-72651e17852a - 81850 - generate_personnel_data - STEP_START - Started execution of step "generate_personnel_data".
-[32m2026-07-19 13:33:08 -0600[0m - dagster - [34mDEBUG[0m - extracted_data_job - 34651193-8038-4207-9d7f-72651e17852a - 81850 - generate_personnel_data - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
-[32m2026-07-19 13:33:08 -0600[0m - dagster - [34mDEBUG[0m - extracted_data_job - 34651193-8038-4207-9d7f-72651e17852a - 81850 - generate_personnel_data - ASSET_MATERIALIZATION - Materialized value generate_personnel_data.
-[32m2026-07-19 13:33:08 -0600[0m - dagster - [34mDEBUG[0m - extracted_data_job - 34651193-8038-4207-9d7f-72651e17852a - 81850 - generate_personnel_data - STEP_SUCCESS - Finished execution of step "generate_personnel_data" in 41ms.

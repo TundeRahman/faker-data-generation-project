@@ -1,5 +1,0 @@
-[32m2026-07-19 08:42:26 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a58447da-ddfc-40f2-8c91-81469a24bc24 - 48014 - LOGS_CAPTURED - Capturing logs for process (pid: 48014).
-[32m2026-07-19 08:42:26 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a58447da-ddfc-40f2-8c91-81469a24bc24 - 48014 - generate_personnel_data - STEP_START - Started execution of step "generate_personnel_data".
-[32m2026-07-19 08:42:26 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a58447da-ddfc-40f2-8c91-81469a24bc24 - 48014 - generate_personnel_data - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
-[32m2026-07-19 08:42:26 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a58447da-ddfc-40f2-8c91-81469a24bc24 - 48014 - generate_personnel_data - ASSET_MATERIALIZATION - Materialized value generate_personnel_data.
-[32m2026-07-19 08:42:26 -0600[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a58447da-ddfc-40f2-8c91-81469a24bc24 - 48014 - generate_personnel_data - STEP_SUCCESS - Finished execution of step "generate_personnel_data" in 41ms.

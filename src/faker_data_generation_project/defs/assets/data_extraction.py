@@ -64,7 +64,7 @@ def generate_customer_data() -> None:
   
 
 @dg.asset   (  
-    deps=["generate_personnel_data"],
+    deps=["generate_product_data"],
 )   
 def product_dataset(database: DuckDBResource) -> None:
     """
@@ -73,19 +73,14 @@ def product_dataset(database: DuckDBResource) -> None:
 
     query = f"""
       create or replace table products as (
-        select
-          'product_name',
-          'brand_name',
-          'SKU',
-          'price',
-          'order_id', 
-          'product_description',
-          'data_generated_at'
-        from '{constants.EXTRACTED_DATA_FILE_PATH}'
+        select *
+        from read_csv_auto('{constants.EXTRACTED_DATA_FILE_PATH}')
       );
     """
 
     with database.get_connection() as conn:
         conn.execute(query)
+        
+
 
 
