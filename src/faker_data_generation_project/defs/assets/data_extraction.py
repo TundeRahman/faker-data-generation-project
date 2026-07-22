@@ -20,7 +20,8 @@ from dagster import Definitions
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 @dg.asset
-def generate_product_data() -> None:
+def generate_product_data(context: dg.AssetExecutionContext) -> None:
+    context.log.info("Asset to watch")
     number_record = 20000
     product_data = []
     for _ in range(number_record):
@@ -66,10 +67,11 @@ def generate_customer_data() -> None:
 @dg.asset   (  
     deps=["generate_product_data"],
 )   
-def product_dataset(database: DuckDBResource) -> None:
+def product_dataset(database: DuckDBResource,context: dg.AssetExecutionContext) -> None:
     """
       The raw taxi zones dataset, loaded into a DuckDB database.
     """
+    context.log.info("Asset to triger")
 
     query = f"""
       create or replace table products as (
